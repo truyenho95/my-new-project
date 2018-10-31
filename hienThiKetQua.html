@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Nhúng Javascript</title>
+</head>
+<body>
+  <!-- Hiển thị kết quả sử dụng hàm alert() -->
+  <button type="button" onclick="alertMessage();">Alert Me!</button>
+  <script>
+    function alertMessage(){
+      alert('Cảnh báo nguy hiểm!');
+    }
+  </script>
+
+  <!-- Hiển thị kết quả sử dụng thẻ HTML -->
+  <div id="messageDiv"></div>
+  <button type="button" onclick="showMessage();">Hello Me!</button>
+  <script>
+    function showMessage(){
+      document.getElementById('messageDiv').innerHTML = 'Hello!';
+    }
+  </script>
+
+  <!-- Hiển thị kết quả sử dụng hàm document.write() -->
+  <button type="button" onclick="changeMessage();">Chào Tui!</button>
+  <script>
+    function changeMessage(){
+      document.write('Xin chào!');
+    }
+  </script>
+
+  <!-- Hiển thị kết quả sử dụng hàm console.log() -->
+  <button type="button" onclick="debugMessage();">Message in Console!</button>
+  <script>
+    function debugMessage(){
+      console.log('Xin chào! Tui là Console!');
+    }
+  </script>
+</body>
+</html>
