@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Calculator</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      width: 50%;
+      display: block;
+      margin: 0 auto;
+    }
+
+    h1 {
+      display: block;
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    h1#notification {
+      color: brown;
+    }
+
+    .form {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .form-input {
+      width: 30%;
+      display: inline-block;
+      padding: 10px 20px;
+    }
+
+    .request {
+      margin: 25px 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .request button {
+      border: 0;
+      padding: 10px 20px;
+      background-color: rgb(8, 117, 8);
+      color: white;
+      cursor: pointer;
+    }
+
+    .request button:hover {
+      background-color: rgb(3, 63, 3);
+    }
+  </style>
+</head>
+<body>
+  <h1>Calculator</h1>
+
+  <div class="form">
+    <input type="number" class="form-input" id="x" onchange="getX()" placeholder="1">
+    <input type="number" class="form-input" id="y" onchange="getY()" placeholder="1">
+  </div>
+  <!-- /.form -->
+  
+  <div class="request">
+    <button type="button" id="addition" onclick="addition()">Addition(+)</button>
+    <button type="button" id="subtraction" onclick="subtraction()">Subtraction(-)</button>
+    <button type="button" id="multiplication" onclick="multiplication()">Multiplication(x)</button>
+    <button type="button" id="division" onclick="division()">Division(/)</button>
+  </div>
+  <!-- /.request -->
+  
+  <h1 id="notification"></h1>
+
+  <script>
+    var x=1, y=1;
+    var result;
+
+    function getX() {
+      x = parseFloat(document.getElementById('x').value);
+      return x;
+    }
+    
+    function getY() {
+      y = parseFloat(document.getElementById('y').value);
+      return y;
+    }
+    
+    function addition() {
+      result = x+y;
+      document.getElementById('notification').innerHTML = 'Result Addition: ' + result;
+      return result;
+    }
+    
+    function subtraction() {
+      result = x-y;
+      document.getElementById('notification').innerHTML = 'Result Subtraction: ' + result;
+      return result;
+    }
+    
+    function multiplication() {
+      result = x*y;
+      document.getElementById('notification').innerHTML = 'Result Multiplication: ' + result;
+      return result;
+    }
+    
+    function division() {
+      result = x/y;
+      document.getElementById('notification').innerHTML = 'Result Division: ' + result;
+      return result;
+    }
+
+  </script>
+</body>
+</html>
