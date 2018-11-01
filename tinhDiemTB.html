@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Tính điểm trung bình</title>
+</head>
+<body>
+  <script>
+  // Bài 1: Viết chương trình nhập điểm của một sinh viên cho các môn: Vật lý, Hóa học, và Sinh học. Sau đó hiển thị điểm trung bình và tổng của những điểm này.
+  
+  var diemLy = parseFloat(prompt('Mời nhập điểm Lý:'));
+  var diemHoa = parseFloat(prompt('Mời nhập điểm Hóa:'));
+  var diemSinh = parseFloat(prompt('Mời nhập điểm Sinh:'));
+  
+  document.write("<h3>Điểm Lý nhập vào: </h3>" + "<p>" + diemLy + "</p>");
+  document.write("<h3>Điểm Hóa nhập vào: </h3>" + "<p>" + diemHoa + "</p>");
+  document.write("<h3>Điểm Sinh nhập vào: </h3>" + "<p>" + diemSinh + "</p>");
+  document.write("<h2>Điểm trung binh của sinh viên là: </h2>" + "<h4>" + Number.parseFloat((diemLy+diemHoa+diemSinh)/3).toFixed(2) + "</h4>");
+  document.write("<h2>Tổng của sinh viên là: </h2>" + "<h4>" + (diemLy+diemHoa+diemSinh) + "</h4>");
+
+  </script>
+</body>
+</html>
