@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Khai báo và sử dụng biến</title>
+</head>
+<body>
+  <script>
+    // Bài 1: Khai báo các biến thuộc các kiểu khác nhau, gán giá trị cho chúng và in ra tài liệu HTML.
+    var i = 10;
+    var f = 20.5;
+    var b = true;
+    var s = 'Hà Nội';
+
+    document.write('<h3>Bài 1: Khai báo các biến thuộc các kiểu khác nhau, gán giá trị cho chúng và in ra tài liệu HTML.</h3>');
+    document.write('i = ' + i + '<br/>');
+    document.write('f = ' + f + '<br/>');
+    document.write('b = ' + b + '<br/>');
+    document.write('s = ' + s + '<br/>');
+
+    // Bài 2:  Viết một đoạn mã Javascript, khai báo biến width chứa giá trị độ rộng của hình chữ nhật, biến height chứa giá trị chiều cao của hình chữ nhật. In ra màn hình diện tích của hình chữ nhật đó.
+    var width = 25;
+    var height = 4;
+    var area = width * height;
+
+    document.write('<h3> Viết một đoạn mã Javascript, khai báo biến width chứa giá trị độ rộng của hình chữ nhật, biến height chứa giá trị chiều cao của hình chữ nhật. In ra màn hình diện tích của hình chữ nhật đó.</h3>');
+    document.write('Diện tích hình chữ nhật = ' + area);
+
+    // Bài 3: Dùng hàm prompt() để nhập 2 số từ bàn phím, lưu vào 2 biến là a và b. Kiểm tra xem a có phải là bội số của b hay không (tức là a có chia hết cho b hay không). Hiển thị kết quả ra màn hình bằng cách sử dụng hàm alert().
+    var a = parseInt(prompt('Mời nhập số a:'));
+    var b = parseInt(prompt('Mời nhập số b:'));
+
+    document.write('<h3>Bài 3: Dùng hàm prompt() để nhập 2 số từ bàn phím, lưu vào 2 biến là a và b. Kiểm tra xem a có phải là bội số của b hay không (tức là a có chia hết cho b hay không). Hiển thị kết quả ra màn hình bằng cách sử dụng hàm alert().</h3>');
+
+    if (!(a%b))
+    {
+      alert('a là bội của b');
+      document.write('a là bội của b');
+    }
+    else
+    {
+      alert('a không phải là bội của b');
+      document.write('a không phải là bội của b');
+    }
+  </script>
+</body>
+</html>
